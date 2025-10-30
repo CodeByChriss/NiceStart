@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- own colors -->
+    <color name="teal">#267365</color>
+    <color name="yellow">#F2CB05</color>
+    <color name="orange">#F29F05</color>
+    <color name="deep_orange">#F28705</color>
+    <color name="red">#F23030</color>
 </resources>
