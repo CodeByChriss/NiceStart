@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@android:color/white"
-            android:hint="Username"
+            android:hint="@string/username"
             android:drawableLeft="@drawable/usericon"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@android:color/white"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:drawableLeft="@drawable/keyicon"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@android:color/white"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:drawableLeft="@drawable/email"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -85,7 +85,7 @@
         android:layout_height="60dp"
         android:backgroundTint="@color/button_custom"
         android:onClick="openMain"
-        android:text="SIGN UP"
+        android:text="@string/signup"
         android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -97,7 +97,7 @@
         style="@style/buttonOutlined"
         android:layout_height="60dp"
         android:onClick="openLogin"
-        android:text="CANCEL"
+        android:text="@string/cancel"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/btnRegistrar"/>
