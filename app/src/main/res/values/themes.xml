@@ -6,4 +6,6 @@
     </style>
 
     <style name="Theme.NiceStart" parent="Base.Theme.NiceStart" />
+
+
 </resources>

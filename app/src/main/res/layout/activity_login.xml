@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
-            android:background="@color/white"
+            android:background="@android:color/white"
             android:hint="Username"
             android:drawableLeft="@drawable/usericon"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
-            android:background="@color/white"
+            android:background="@android:color/white"
             android:hint="Password"
             android:inputType="textPassword"
             android:drawableLeft="@drawable/keyicon"/>
@@ -63,21 +63,23 @@
         android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/button_custom"
         android:text="LOGIN"
+        android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/til2"
-        style="@style/Widget.Material3.Button.ElevatedButton"/>
+        style="@style/buttonOutlined"/>
 
     <Button
         android:id="@+id/btnSingUp"
-        android:layout_width="0dp"
+        style="@style/buttonOutlined"
         android:layout_height="60dp"
+        android:onClick="openMain"
         android:text="SIGN UP"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        style="@style/Widget.Material3.Button.OutlinedButton"/>
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
