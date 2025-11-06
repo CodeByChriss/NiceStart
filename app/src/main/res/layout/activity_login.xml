@@ -67,6 +67,7 @@
         android:onClick="openMain"
         android:text="@string/login"
         android:textColor="@android:color/black"
+        android:layout_marginTop="3dp"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/til2"
