@@ -24,7 +24,7 @@ public class Profile extends AppCompatActivity {
         ImageView mProfile = findViewById(R.id.ivProfile);
 
         Glide.with(this)
-                .load("https://i.pinimg.com/736x/ad/af/9a/adaf9a19e254e10527655bb80c56d4e7.jpg")
+                .load("https://i.pinimg.com/736x/05/09/93/0509931a4b8289bbd8de9843dd57fe9c.jpg")
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()
 //                .diskCacheStrategy(DiskCacheStrategy.ALL)
