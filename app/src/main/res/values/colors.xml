@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="transparent">#00FFFF00</color>
+
     <!-- own colors -->
     <color name="teal">#267365</color>
     <color name="yellow">#F2CB05</color>
