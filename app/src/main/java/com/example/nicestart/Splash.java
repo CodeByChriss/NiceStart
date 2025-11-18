@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -24,6 +26,7 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         ImageView mSea = findViewById(R.id.ivBackView);
+        ImageView ivLogo = findViewById(R.id.ivLogo);
 
         Glide.with(this)
                 .load("https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1482&q=80")
@@ -33,6 +36,9 @@ public class Splash extends AppCompatActivity {
                 .placeholder(new ColorDrawable(this.getResources().getColor(R.color.orange)))
 //                .circleCrop()
                 .into(mSea);
+
+        Animation myanim = AnimationUtils.loadAnimation(this,R.anim.blink_translation_rotation);
+        ivLogo.startAnimation(myanim);
 
         openApp();
     }
@@ -47,6 +53,6 @@ public class Splash extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
-        }, 5000);
+        }, 4000);
     }
 }
