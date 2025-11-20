@@ -67,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Setting...", Toast.LENGTH_LONG);
             toast.show();
             return true;
-        }else if(item.getItemId() == R.id.itemCopy){
-            Snackbar snackbar = Snackbar.make(findViewById(R.id.itemCopy), "Key collected", BaseTransientBottomBar.LENGTH_LONG);
+        }else if(item.getItemId() == R.id.itemKey){
+            Snackbar snackbar = Snackbar.make(findViewById(R.id.itemKey), "Key collected", BaseTransientBottomBar.LENGTH_LONG);
 
             snackbar.setAction("Return the key", new View.OnClickListener() {
                 @Override

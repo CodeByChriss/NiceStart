@@ -21,33 +21,43 @@
 </com.google.android.material.textfield.TextInputLayout>
 ```
 
-## Mi pantalla de carga
+# Mi pantalla de carga
 Esta pantalla cuenta con una animación en el logo en la que se mueve para arriba y luego vuelve a bajar (transition), tiene un blink y rota sobre si mismo.
 
 ![pantalla de carga](./img/loading.png)
 
-## Mi pantalla de Login
+# Mi pantalla de Login
 
 ![pantalla de login](./img/login.png)
 
-## Mi pantalla de Registro
+# Mi pantalla de Registro
 
 ![pantalla de registro](./img/signup.png)
 
-## Mi pantalla principal
+# Mi pantalla principal
 Esta pantalla cuenta con un menú contextual al mantener pulsado el texto situado en el centro.
 También cuenta con un menú appbar y con un swipe refresh.
 
 ![pantalla principal](./img/main.png)
 
-# Menú contextual
-![pantalla principal](./img/menu_context.png)
+### Menú contextual
+![menu context](./img/menu_context.png)
 
-# Menú appbar
-![pantalla principal](./img/menu_appbar.png)
+### Menú appbar
+![menu appbar](./img/menu_appbar.png)
 
-# Swipe Refresh
-![pantalla principal](./img/swipe_refresh.png)
+### Swipe Refresh
+![swipe refresh](./img/swipe_refresh.png)
+
+# The key...
+En el centro podemos ver un texto indicandonos que encontremos la llave.
+La llave en un icono ubicado en el menú action bar (arriba a la derecha).
+
+![key action icon](./img/key_icon.png)
+
+Al pulsarlo nos aparece un snackbar diciendonos que hemos encontrado la llave y si queremos devolverla (devolverla sería reiniciar el juego).
+
+![snackbar](./img/snackbar.png)
 
 > ##### Si consideras útil el repositorio, apóyalo haciendo "★ Star" en el repositorio. ¡Gracias!
 

@@ -6,8 +6,8 @@
         android:title="@string/menu_appbar_settings"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/itemCopy"
-        android:title="@string/menu_context_item1"
+        android:id="@+id/itemKey"
+        android:title="@string/menu_appbar_key"
         android:icon="@drawable/keyicon"
         app:showAsAction="ifRoom"/>
 </menu>
