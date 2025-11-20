@@ -15,8 +15,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
+    private TextView mycontext;
     private SwipeRefreshLayout swipeLayout;
 
     @Override
@@ -25,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        TextView mycontext = findViewById(R.id.mytext);
+        mycontext = findViewById(R.id.mytext);
         registerForContextMenu(mycontext);
 
         swipeLayout = findViewById(R.id.mySwipe);
@@ -44,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Item copied", Toast.LENGTH_LONG);
             toast.show();
         }else if(item.getItemId() == R.id.item2){
-            Toast toast2 = Toast.makeText(this, "Downloading item...", Toast.LENGTH_LONG);
-            toast2.show();
+            Toast toast = Toast.makeText(this, "Downloading item...", Toast.LENGTH_LONG);
+            toast.show();
         }
         return true;
     }
@@ -64,8 +68,18 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
             return true;
         }else if(item.getItemId() == R.id.itemCopy){
-            Toast toast = Toast.makeText(this, "key...", Toast.LENGTH_LONG);
-            toast.show();
+            Snackbar snackbar = Snackbar.make(findViewById(R.id.itemCopy), "Key collected", BaseTransientBottomBar.LENGTH_LONG);
+
+            snackbar.setAction("Return the key", new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mycontext.setText("Find the key...");
+                }
+            });
+
+            mycontext.setText("You have the key...");
+            snackbar.show();
+
             return true;
         }
         return false;
