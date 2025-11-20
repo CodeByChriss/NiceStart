@@ -39,9 +39,14 @@ Esta pantalla cuenta con un menú contextual al mantener pulsado el texto situad
 También cuenta con un menú appbar y con un swipe refresh.
 
 ![pantalla principal](./img/main.png)
-<br>
-![pantalla principal](./img/menu_context.png)![pantalla principal](./img/menu_appbar.png)
-<br>
+
+## Menú contextual
+![pantalla principal](./img/menu_context.png)
+
+## Menú appbar
+![pantalla principal](./img/menu_appbar.png)
+
+## Swipe Refresh
 ![pantalla principal](./img/swipe_refresh.png)
 
 > ##### Si consideras útil el repositorio, apóyalo haciendo "★ Star" en el repositorio. ¡Gracias!
