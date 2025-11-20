@@ -8,4 +8,8 @@
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="cancel">CANCEL</string>
+
+    <string name="menu_context_item1">Copy</string>
+    <string name="menu_context_item2">Download</string>
+    <string name="menu_appbar_settings">Settings</string>
 </resources>
