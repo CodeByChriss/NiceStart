@@ -59,6 +59,20 @@ Al pulsarlo nos aparece un snackbar diciendonos que hemos encontrado la llave y 
 
 ![snackbar](./img/snackbar.png)
 
+# Código del snackbar
+```java
+Snackbar snackbar = Snackbar.make(findViewById(R.id.itemKey), "Key collected", BaseTransientBottomBar.LENGTH_LONG);
+
+snackbar.setAction("Return the key", new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        mycontext.setText("Find the key...");
+    }
+});
+
+snackbar.show();
+```
+
 > ##### Si consideras útil el repositorio, apóyalo haciendo "★ Star" en el repositorio. ¡Gracias!
 
 >This repository is licensed under
