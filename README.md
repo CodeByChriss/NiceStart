@@ -24,7 +24,7 @@
 # Mi pantalla de carga
 Esta pantalla cuenta con una animación en el logo en la que se mueve para arriba y luego vuelve a bajar (transition), tiene un blink y rota sobre si mismo.
 
-![pantalla de carga](./img/loading.png)
+![pantalla de carga](./img/loading.gif)
 
 # Mi pantalla de Login
 
