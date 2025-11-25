@@ -26,7 +26,7 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         ImageView mSea = findViewById(R.id.ivBackView);
-        ImageView ivLogo = findViewById(R.id.ivLogo);
+//        ImageView ivLogo = findViewById(R.id.ivLogo);
 
         Glide.with(this)
                 .load("https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1482&q=80")
@@ -38,7 +38,7 @@ public class Splash extends AppCompatActivity {
                 .into(mSea);
 
         Animation myanim = AnimationUtils.loadAnimation(this,R.anim.blink_translation_rotation);
-        ivLogo.startAnimation(myanim);
+//        ivLogo.startAnimation(myanim);
 
         openApp();
     }
