@@ -11,6 +11,8 @@
 
     <style name="Theme.NiceStart.ActionBar" parent="Theme.Material3.DayNight" >
         <!-- <item name="android:textColorPrimary">@android:color/white</item> -->
+        <!-- PARA QUE NO APAREZCA PRIMERO EL CARGAR DE ANDROID Y LUEGO EL SPLASH -->
+        <item name="android:windowIsTranslucent">true</item>
         <!-- Estilo del ActionBar -->
         <item name="actionBarStyle">@style/TransparentActionBar</item>
     </style>
