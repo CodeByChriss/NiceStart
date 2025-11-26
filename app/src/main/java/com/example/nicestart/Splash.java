@@ -16,6 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 
 public class Splash extends AppCompatActivity {
 
@@ -39,6 +41,37 @@ public class Splash extends AppCompatActivity {
 
         Animation myanim = AnimationUtils.loadAnimation(this,R.anim.blink_translation_rotation);
 //        ivLogo.startAnimation(myanim);
+
+
+        // Para cambiar X e Y:
+        // view.setPivotX(1f)
+        // view.setPivotY(1f)
+
+        // Pulse: pulso suave desde 0,0
+        // Shake: temblor horizontal
+        // Swing: balanceo como un péndulo desde arriba
+        // Tada: aplauso o "éxito" con rotación y escala rápida
+        // Pulse: pulso suave desde 0,0
+        // Wobble: tambaleo juguetón con rotación irregular
+        // Bounce: rebote simple desde abajo
+        // Flash: parpadeo rápido (alpha on/off)
+        // RubberBand: estiramiento elástico horizontal
+        // BounceIn: entrada con rebote desde el centro
+        // FadeIn: desvanecimiento de entrada suave (de transparente a opaco)
+        // FlipInX: volteo entrada horizontal (como una página girando)
+        // RotateIn: rotación entrada completa (360° suave)
+        // SlideInLeft: deslizamiento entrada desde la izquierda
+        // ZoomIn: zoom entrada desde pequeño a normal
+        // FadeOut: desvanecimiento salida (a transparente)
+        // SlideOutRight: deslizamiento salida hacia la derecha
+        // BounceInDown: rebote entrada desde arriba
+        // FlipOutY: volteo salida vertical
+        // ZoomOut: zoom salida a pequeño
+        // Hinge: bisagra (rotación dramática como puerta abriéndose)
+        YoYo.with(Techniques.Tada)
+                .duration(1000)
+                .repeat(1)
+                .playOn(findViewById(R.id.tvAppName));
 
         openApp();
     }
