@@ -77,6 +77,11 @@ snackbar.show();
 El dialogo modal se muestra al hacer click en los tres puntitos del app bar y pulsar en la opción settings.
 
 ![appbar_dots](./img/appbar_dots.png) ![appbar_settings](./img/appbar_settings.png)
+
+La opción de "Yes" cierra la aplicación.
+La opción de "No" cierra el dialogo modal y muestra un Toast.
+La opción "Do nothing" simplemente cierra el dialogo modal.
+
 ![modal_dialog](./img/modal_dialog.png)
 
 ```java
