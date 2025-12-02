@@ -73,6 +73,50 @@ snackbar.setAction("Return the key", new View.OnClickListener() {
 snackbar.show();
 ```
 
+# Dialogo modal
+El dialogo modal se muestra al hacer click en los tres puntitos del app bar y pulsar en la opción settings.
+
+![appbar_dots](./img/appbar_dots.png) ![appbar_settings](./img/appbar_settings.png)
+![modal_dialog](./img/modal_dialog.png)
+
+```java
+public void showAlertDialogButtonClicked(MainActivity mainActivity) {
+    MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(mainActivity);
+
+    builder.setTitle("Exit!");
+    builder.setMessage("Do you want to exit the app?");
+    builder.setIcon(R.drawable.person);
+
+    builder.setNeutralButton("Do nothing", new
+            DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+
+    builder.setNegativeButton("No", new
+            DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(mainActivity, "Okay", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
+
+    builder.setPositiveButton("Yes", new
+            DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    System.exit(0);
+                }
+            });
+
+    AlertDialog dialog = builder.create();
+    dialog.show();
+}
+```
+
 > ##### Si consideras útil el repositorio, apóyalo haciendo "★ Star" en el repositorio. ¡Gracias!
 
 >This repository is licensed under
