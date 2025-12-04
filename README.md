@@ -1,25 +1,6 @@
 # Nice Start
 
-## Mi primer proyecto en android studio
-
-```xml
-<com.google.android.material.textfield.TextInputLayout
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    app:passwordToggleEnabled="true"
-    app:startIconDrawable="@drawable/keyicon">
-    
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:alpha="0.6"
-        android:background="@android:color/white"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:drawableLeft="@drawable/keyicon"/>
-    
-</com.google.android.material.textfield.TextInputLayout>
-```
+Esta es mi primera aplicación con Android Studio
 
 # Mi pantalla de carga
 Esta pantalla cuenta con una animación en el logo en la que se mueve para arriba y luego vuelve a bajar (transition), tiene un blink y rota sobre si mismo.
