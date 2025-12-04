@@ -6,13 +6,18 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
@@ -21,18 +26,38 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mycontext;
     private SwipeRefreshLayout swipeLayout;
+    private WebView myWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         mycontext = findViewById(R.id.mytext);
-        registerForContextMenu(mycontext);
+//        registerForContextMenu(mycontext);
+
+        myWebView = (WebView) findViewById(R.id.wvVistaWeb);
+        registerForContextMenu(myWebView);
 
         swipeLayout = findViewById(R.id.mySwipe);
         swipeLayout.setOnRefreshListener(mOnRefreshListener);
+
+        String html = "<html>" +
+                "<head><style>" +
+                "html, body { margin:0; padding: 0; height: 100%; overflow: hidden; }" +
+                "img {width: 100%; height: 100%; object-fit: over }" +
+                "</style></head>" +
+                "<body>" +
+                "<img src='https://thispersondoesnotexist.com/' />" +
+                "</body></html>";
+
+        myWebView.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null);
     }
 
     // MENU CONTEXT
@@ -44,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.item1) {
-            Toast toast = Toast.makeText(this, "Item copied", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, "Image copied", Toast.LENGTH_LONG);
             toast.show();
         } else if (item.getItemId() == R.id.item2) {
-            Toast toast = Toast.makeText(this, "Downloading item...", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, "Downloading image...", Toast.LENGTH_LONG);
             toast.show();
         }
         return true;
@@ -88,8 +113,7 @@ public class MainActivity extends AppCompatActivity {
             mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
         @Override
         public void onRefresh() {
-            Toast toast = Toast.makeText(MainActivity.this, "Hi there! I don't exists.", Toast.LENGTH_LONG);
-            toast.show();
+            myWebView.reload();
             swipeLayout.setRefreshing(false);
         }
     };
@@ -115,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(mainActivity, "Okay", Toast.LENGTH_SHORT).show();
-                        dialog.dismiss();
+//                        dialog.dismiss();
                     }
                 });
 

@@ -13,7 +13,7 @@
     <style name="Theme.NiceStart.ActionBar" parent="Theme.Material3.DayNight" >
         <!-- <item name="android:textColorPrimary">@android:color/white</item> -->
         <!-- Estilo del ActionBar -->
-        <item name="actionBarStyle">@style/TransparentActionBar</item>
+<!--        <item name="actionBarStyle">@style/TransparentActionBar</item>-->
     </style>
 
     <style name="TransparentActionBar" parent="Widget.AppCompat.ActionBar">

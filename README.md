@@ -122,6 +122,48 @@ public void showAlertDialogButtonClicked(MainActivity mainActivity) {
 }
 ```
 
+# Cargar páginas con WebView
+En este caso probamos el WebView usandolo como fondo del MainActivity. 
+
+![appbar_dots](./img/webview.png)
+
+### Implementación
+En el onCreate del activity deseado
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    ... // resto del código
+    myWebView = (WebView) findViewById(R.id.wvVistaWeb);
+    registerForContextMenu(myWebView);
+
+    // Inserción HTML
+    String html = "<html>" +
+            "<head><style>" +
+            "html, body { margin:0; padding: 0; height: 100%; overflow: hidden; }" +
+            "img {width: 100%; height: 100%; object-fit: over }" +
+            "</style></head>" +
+            "<body>" +
+            "<img src='https://thispersondoesnotexist.com/' />" +
+            "</body></html>";
+
+    myWebView.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null);
+}
+```
+
+Y en el onRefresh del swipe refresh
+```java
+protected SwipeRefreshLayout.OnRefreshListener
+            mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            ... // el resto del código (en mi caso no hay más)
+            myWebView.reload();
+            swipeLayout.setRefreshing(false);
+        }
+    };
+```
+
 > ##### Si consideras útil el repositorio, apóyalo haciendo "★ Star" en el repositorio. ¡Gracias!
 
 >This repository is licensed under
