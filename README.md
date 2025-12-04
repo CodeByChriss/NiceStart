@@ -2,20 +2,20 @@
 
 Esta es mi primera aplicación con Android Studio
 
-# Mi pantalla de carga
+## Mi pantalla de carga
 Esta pantalla cuenta con una animación en el logo en la que se mueve para arriba y luego vuelve a bajar (transition), tiene un blink y rota sobre si mismo.
 
 ![pantalla de carga](./img/loading.gif)
 
-# Mi pantalla de Login
+## Mi pantalla de Login
 
 ![pantalla de login](./img/login.png)
 
-# Mi pantalla de Registro
+## Mi pantalla de Registro
 
 ![pantalla de registro](./img/signup.png)
 
-# Mi pantalla principal
+## Mi pantalla principal
 Esta pantalla cuenta con un menú contextual al mantener pulsado el texto situado en el centro.
 También cuenta con un menú appbar y con un swipe refresh.
 
@@ -30,7 +30,7 @@ También cuenta con un menú appbar y con un swipe refresh.
 ### Swipe Refresh
 ![swipe refresh](./img/swipe_refresh.png)
 
-# The key...
+## The key...
 En el centro podemos ver un texto indicandonos que encontremos la llave.
 La llave en un icono ubicado en el menú action bar (arriba a la derecha).
 
@@ -40,7 +40,7 @@ Al pulsarlo nos aparece un snackbar diciendonos que hemos encontrado la llave y 
 
 ![snackbar](./img/snackbar.png)
 
-# Código del snackbar
+### Snackbar
 ```java
 Snackbar snackbar = Snackbar.make(findViewById(R.id.itemKey), "Key collected", BaseTransientBottomBar.LENGTH_LONG);
 
@@ -54,7 +54,7 @@ snackbar.setAction("Return the key", new View.OnClickListener() {
 snackbar.show();
 ```
 
-# Dialogo modal
+## Dialogo modal
 El dialogo modal se muestra al hacer click en los tres puntitos del app bar y pulsar en la opción settings.
 
 ![appbar_dots](./img/appbar_dots.png) ![appbar_settings](./img/appbar_settings.png)
@@ -103,7 +103,7 @@ public void showAlertDialogButtonClicked(MainActivity mainActivity) {
 }
 ```
 
-# Cargar páginas con WebView
+## WebView
 En este caso probamos el WebView usandolo como fondo del MainActivity. 
 
 ![appbar_dots](./img/webview.png)
