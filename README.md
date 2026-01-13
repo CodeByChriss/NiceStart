@@ -145,6 +145,11 @@ protected SwipeRefreshLayout.OnRefreshListener
     };
 ```
 
+## Internalización
+Ahora mismo la aplicación cuenta con dos el idioma por defecto (ingles) y el agregado que es el Español.
+
+![login_español](./img/loginEspaniol.png)
+
 > ##### Si consideras útil el repositorio, apóyalo haciendo "★ Star" en el repositorio. ¡Gracias!
 
 >This repository is licensed under

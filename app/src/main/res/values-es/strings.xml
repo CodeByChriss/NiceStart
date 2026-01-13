@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">INICIAR SESIÓN</string>
+    <string name="signup">REGISTRARSE</string>
+    <string name="username">Nombre de Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="email">Correo</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="menu_context_item1">Copiar</string>
+    <string name="menu_context_item2">Descargar</string>
+    <string name="menu_appbar_settings">Ajustes</string>
+    <string name="menu_appbar_key">Clave</string>
+</resources>

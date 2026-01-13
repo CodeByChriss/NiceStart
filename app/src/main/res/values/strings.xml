@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NiceStart</string>
+    <string name="app_name" translatable="false">NiceStart</string>
 
     <!-- own variables -->
     <string name="login">LOGIN</string>
