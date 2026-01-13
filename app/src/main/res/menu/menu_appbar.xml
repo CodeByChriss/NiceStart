@@ -9,5 +9,6 @@
         android:id="@+id/itemKey"
         android:title="@string/menu_appbar_key"
         android:icon="@drawable/keyicon"
+        android:iconTint="@color/main"
         app:showAsAction="ifRoom"/>
 </menu>

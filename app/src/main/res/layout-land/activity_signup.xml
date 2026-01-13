@@ -41,8 +41,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
-            android:background="@android:color/white"
             android:hint="@string/username"
+            android:background="@color/contrast"
+            android:textColor="@color/main"
             android:drawableLeft="@drawable/usericon"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,8 +62,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
-            android:background="@android:color/white"
             android:hint="@string/password"
+            android:background="@color/contrast"
+            android:textColor="@color/main"
             android:inputType="textPassword"
             android:drawableLeft="@drawable/keyicon"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -81,7 +83,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
-            android:background="@android:color/white"
+            android:background="@color/contrast"
+            android:textColor="@color/main"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:drawableLeft="@drawable/email"/>

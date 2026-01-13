@@ -150,6 +150,16 @@ Ahora mismo la aplicación cuenta con dos el idioma por defecto (ingles) y el ag
 
 ![login_español](./img/loginEspaniol.png)
 
+## Modo oscuro
+El modo oscuro es ahora mismo un estandar ya que más del 50% de los usuarios prefieren y utilizan el modo oscuro en su día a día.
+Por no hablar de todos sus beneficios...
+
+### En el Login
+![login_modo_oscuro](./img/loginDarkMode.png)
+
+### En la pantalla principal
+![pantalla_principal_modo_oscuro](./img/pantallaPrincipalModoOscuro.png)
+
 > ##### Si consideras útil el repositorio, apóyalo haciendo "★ Star" en el repositorio. ¡Gracias!
 
 >This repository is licensed under

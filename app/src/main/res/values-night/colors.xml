@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00FFFF00</color>
+
+    <!-- own colors -->
+    <color name="teal">#267365</color>
+    <color name="yellow">#856E05</color>
+    <color name="orange">#916106</color>
+    <color name="deep_orange">#874B04</color>
+    <color name="red">#9A2020</color>
+    <color name="contrast">#292929</color>
+    <color name="main">#FFFFFF</color>
+</resources>
