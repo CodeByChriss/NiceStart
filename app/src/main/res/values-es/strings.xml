@@ -10,4 +10,6 @@
     <string name="menu_context_item2">Descargar</string>
     <string name="menu_appbar_settings">Ajustes</string>
     <string name="menu_appbar_key">Clave</string>
+    <string name="language">Lenguaje</string>
+    <string name="favourite">Favorito</string>
 </resources>

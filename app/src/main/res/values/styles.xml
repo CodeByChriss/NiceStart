@@ -9,4 +9,9 @@
         <item name="strokeColor">@android:color/white</item>
         <item name="strokeWidth">1dp</item>
     </style>
+
+    <style name="FabRound">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
