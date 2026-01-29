@@ -15,10 +15,10 @@
         <activity
             android:name=".MainBab"
             android:exported="true"
-            android:theme="@style/Theme.NiceStart.ActionBar" />
+            android:theme="@style/Theme.NiceStart.NoActionBar" />
         <activity
             android:name=".Profile"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.NiceStart.NoActionBar" />
         <activity
             android:name=".Splash"

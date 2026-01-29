@@ -160,6 +160,52 @@ Por no hablar de todos sus beneficios...
 ### En la pantalla principal
 ![pantalla_principal_modo_oscuro](./img/pantallaPrincipalModoOscuro.png)
 
+## Bottom app bar
+La aplicación cuenta con un bottom app bar con diferentes opcionar y que al hacer croll se oculta automaticamente.
+
+![bottom_app_bar_mostrado](./img/babMostrado.png)
+![bottom_app_bar_oculto](./img/babOculto.png)
+
+### Funcionalidad del menú
+Los botones de la derecha (el corazón y el planeta) muestran un toast.
+Mientras que el icono de hamburguer abre un bottom sheet menu con tres opciones distintas, cada una con su funcionalidad.
+
+![bottom_sheet_menu](./img/bottom_sheet_menu.png)
+
+- Cerrar aplicación cierra la app usando:
+```java
+option1.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        bottomSheetDialog.dismiss();
+        System.exit(0);
+    }
+});
+```
+- Mi perfil habre el activity Profile:
+```java
+option2.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        bottomSheetDialog.dismiss();
+        Intent intent = new Intent(MainBab.this, Profile.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+});
+```
+- Y cerrar sesión simplemente muestra un toast:
+```java
+option3.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(MainBab.this, "Logout clicked", Toast.LENGTH_SHORT).show();
+        bottomSheetDialog.dismiss();
+    }
+});
+```
+
+
 > ##### Si consideras útil el repositorio, apóyalo haciendo "★ Star" en el repositorio. ¡Gracias!
 
 >This repository is licensed under
