@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/option01"
+        android:icon="@drawable/keyicon"
+        android:title="@string/close_app" />
+    <item
+        android:id="@+id/option02"
+        android:icon="@drawable/usericon"
+        android:title="@string/my_profile" />
+    <item
+        android:id="@+id/option03"
+        android:icon="@drawable/person"
+        android:title="@string/logout" />
+</menu>

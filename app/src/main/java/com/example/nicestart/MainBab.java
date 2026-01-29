@@ -13,7 +13,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.example.nicestart.databinding.ActivityMainBabBinding;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainBab extends AppCompatActivity {
 
@@ -37,7 +41,8 @@ public class MainBab extends AppCompatActivity {
         bottomAppBar.setNavigationOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                showBottomSheetDialog();
+                showNavigationDrawer();
+                // showBottomSheetDialog();
             }
         });
 
@@ -96,6 +101,31 @@ public class MainBab extends AppCompatActivity {
                 Toast.makeText(MainBab.this, "Logout clicked", Toast.LENGTH_SHORT).show();
                 bottomSheetDialog.dismiss();
             }
+        });
+    }
+
+    private void showNavigationDrawer(){
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+
+        drawerLayout.openDrawer(GravityCompat.START);
+
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+
+            if (id == R.id.option01) {
+                System.exit(0);
+            } else if (id == R.id.option02) {
+                Intent intent = new Intent(MainBab.this, Profile.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            } else if (id == R.id.option03) {
+                Toast.makeText(MainBab.this, "Logout clicked", Toast.LENGTH_SHORT).show();
+            }
+
+            // Cerrar el menú al hacer clic
+            drawerLayout.closeDrawer(GravityCompat.START);
+            return true;
         });
     }
 }

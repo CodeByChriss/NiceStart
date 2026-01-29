@@ -205,6 +205,87 @@ option3.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
+## Navigation drawer
+
+
+### ¿Cómo lo he agregado?
+Primero, he modificado el activity_main_bab.xml y he contenido todo en un <androidx.drawerlayout.widget.DrawerLayout/>, de esta forma:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    ... <!-- El resto del fichero -->
+</androidx.drawerlayout.widget.DrawerLayout>
+```
+
+Dentro del mismo fichero y contenido también por el DrawerLayout he agregado un <NavigationView/>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout>
+    ... <!-- El resto del fichero -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/bottom_sheet_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
+```
+
+El layout que tenemos para el bottom sheet no nos sirve para este DrawerLayout por lo que tenemos que crear un menú con este contenido:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/option01"
+        android:icon="@drawable/keyicon"
+        android:title="@string/close_app" />
+    <item
+        android:id="@+id/option02"
+        android:icon="@drawable/usericon"
+        android:title="@string/my_profile" />
+    <item
+        android:id="@+id/option03"
+        android:icon="@drawable/person"
+        android:title="@string/logout" />
+</menu>
+```
+
+En el fichero MainBab.java, el que contiene la lógica, he creado un nuevo método llamado showNavigationDrawer():
+```java
+private void showNavigationDrawer(){
+    DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+    NavigationView navigationView = findViewById(R.id.nav_view);
+
+    drawerLayout.openDrawer(GravityCompat.START);
+
+    navigationView.setNavigationItemSelectedListener(item -> {
+        int id = item.getItemId();
+
+        if (id == R.id.option01) {
+            System.exit(0);
+        } else if (id == R.id.option02) {
+            Intent intent = new Intent(MainBab.this, Profile.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } else if (id == R.id.option03) {
+            Toast.makeText(MainBab.this, "Logout clicked", Toast.LENGTH_SHORT).show();
+        }
+
+        // Cerrar el menú al hacer clic
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    });
+}
+```
+Y para que no se ejecute el bottom sheet y el drawer layout, he comentado el método showBottomSheetDialog().
+
+Ahora, cuando pulsamos el icono de hamburguer en nuestro bottom app bar se abre el menú lateral.
+![drawer_layout](./img/DrawerLayout.png)
 
 > ##### Si consideras útil el repositorio, apóyalo haciendo "★ Star" en el repositorio. ¡Gracias!
 
