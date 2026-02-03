@@ -145,6 +145,12 @@ protected SwipeRefreshLayout.OnRefreshListener
     };
 ```
 
+## Landscape
+Para facilitar el uso a las personas que prefieren utilizar el móvil inclinado o las que lo estén utilizando en tablet, la aplicación cuenta con una versión horizontal.
+
+Por ejemplo la pantalla principal de la aplicación se ve así:
+![main_landscape](./img/mainLandscape.png)
+
 ## Internalización
 Ahora mismo la aplicación cuenta con dos el idioma por defecto (ingles) y el agregado que es el Español.
 
